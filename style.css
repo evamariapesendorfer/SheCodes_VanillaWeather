@@ -87,8 +87,9 @@ main {
 }
 
 .forecast-icon {
-  text-align: center;
-  font-size: 40px;
+  width: 60px;
+  diyplay: block;
+  margin: 0 auto;
 }
 .forecast-temperatures {
   text-align: center;
