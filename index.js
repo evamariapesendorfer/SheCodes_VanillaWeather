@@ -52,4 +52,32 @@ function handleSearchSubmit(event) {
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sa", "So", "Mo", "Tue", "Wed"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="forecast-day">
+    <div class="forecast-date">${day}</div>
+    <div class="forecast-icon">☀️</div>
+    <div class="forecast-temperatures">
+      <div class="forecast-temperature">
+        <strong>9°</strong>
+      </div>
+      <div class="forecast-temperature">
+        <strong>5°</strong>
+      </div>
+    </div>
+  </div>
+`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
 searchCity("Vienna");
+displayForecast();
